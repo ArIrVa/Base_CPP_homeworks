@@ -47,12 +47,12 @@ public:
     {
         return num1 * num2;
     }
-    // вычетание num2 из num1
+    // вычитание num2 из num1
     double subtract_1_2()
     {
         return (num1 - num2);
     }
-    // вычетание num1 из num2
+    // вычитание num1 из num2
     double subtract_2_1()
     {
         return (num2 - num1);
