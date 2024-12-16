@@ -1,4 +1,2 @@
-hw_2.1/.vscode/
-hw_2.1/02_01_task_1/build
-hw_2.1/02_01_task_2/build
-hw_2.1/02_01_task_3/build
+*/.vscode/
+*/*/build
