@@ -16,11 +16,11 @@ public:
     }
     bool operator==(const Fraction &other) const
     {
-        return numerator_ == other.numerator_, denominator_ == other.denominator_;
+        return (numerator_ * other.denominator_) == (denominator_ * other.numerator_);
     }
     bool operator>(const Fraction &other) const
     {
-        return numerator_ > other.numerator_, denominator_ < other.denominator_;
+        return (numerator_ * other.denominator_) > (other.numerator_ * denominator_);
     }
     bool operator!=(const Fraction &other) const
     {
@@ -43,7 +43,7 @@ public:
 int main()
 {
     Fraction f1(4, 3);
-    Fraction f2(6, 11);
+    Fraction f2(8, 6);
 
     std::cout << "f1" << ((f1 == f2) ? " == " : " not == ") << "f2" << '\n';
     std::cout << "f1" << ((f1 != f2) ? " != " : " not != ") << "f2" << '\n';
@@ -51,5 +51,6 @@ int main()
     std::cout << "f1" << ((f1 > f2) ? " > " : " not > ") << "f2" << '\n';
     std::cout << "f1" << ((f1 <= f2) ? " <= " : " not <= ") << "f2" << '\n';
     std::cout << "f1" << ((f1 >= f2) ? " >= " : " not >= ") << "f2" << '\n';
+
     return 0;
 }
